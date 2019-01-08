@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color:white;
+    height: 100%;
+}
+
+#content, #content .container, #map {
+    width: 100%;
+    height: 100%;
+}
+
+#loading-mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.5);
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+#loading-mask>div{
+    top: 50%;
+    position: relative;
+    width: 75%;
+    margin: auto;
+}
+
+#loading-mask #loading-message {
+    text-align: center;
+}
+
+.navbar-fixed {
+    position:absolute;
+    bottom:0;
+}
+
+#navbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: -10px 0px 20px rgba(0,0,0,.1);  
+}
+
+.message-bar {
+    position:absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#navbar .col {
+    padding: 0;
+}
+
+#initMap-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.tabs-content.carousel.carousel-slider {
+    height: 100% !important;
+}
+
+.panel {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding-bottom: 50px;
+}
