@@ -63,13 +63,14 @@ function removeZones(){
   for (var x=0; x < zones.length; x++){
     zones[x].square.setMap(null);
   }
+  delete zones;
 }
 
 function zoomChangedHandler(){
-  if (map.getZoom() == 15){
-    removeZones();
-  } else {
-    loadZones();
+  switch (map.getZoom()){
+    case 15: removeZones(); break;
+    case 16: loadZones(); break;
+    case 17: break;
   }
 }
 
@@ -79,7 +80,14 @@ function boundsChangedHandler(){
   }
 }
 
+function dragendHandler() {
+  if (map.getZoom() > 15){
+    loadZones();
+  }
+}
+
 function loadZones(){
+    console.log("loadZones...");
     removeZones();
     zones = [];
     var gridStartLat = parseCoord(map.getBounds().ma.j) - 10;

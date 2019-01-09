@@ -73,3 +73,7 @@ body {
     background-color: white;
     padding-bottom: 50px;
 }
+
+.font-3rem {
+  font-size: 3rem;
+}
